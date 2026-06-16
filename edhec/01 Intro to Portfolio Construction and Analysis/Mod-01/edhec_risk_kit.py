@@ -36,3 +36,30 @@ def get_hfi_returns():
     )
     hfi = hfi / 100
     return hfi
+
+
+def skewness(r):
+    """Alternative to scipy skewness."""
+    demeaned_r = r - r.mean()
+    sigma_r = r.std(ddof=0)
+    exp = (demeaned_r**3).mean()
+    return exp / sigma_r**3
+
+
+def kurtosis(r):
+    """Alternative to scipy kurtosis."""
+    demeaned_r = r - r.mean()
+    sigma_r = r.std(ddof=0)
+    exp = (demeaned_r**4).mean()
+    return exp / sigma_r**4
+
+
+import scipy.stats
+
+
+def is_normal(r, level=0.01):
+    """
+    Applies the Jarque-Bera test to determine if a series is normal or not. The null hypothesis is that the data is normally distributed. Rejection of the null at the given level means the data is not normal.
+    """
+    statistic, p_value = scipy.stats.jarque_bera(r)
+    return p_value > level
