@@ -23,3 +23,16 @@ def get_ffme_returns():
     rets = me_m[["Lo 10", "Hi 10"]]
     rets.columns = ["SmallCap", "LargeCap"]
     return rets / 100
+
+
+def get_hfi_returns():
+    """Load the EDHEC Hedge Fund Index returns."""
+    hfi = pd.read_csv(
+        "../labs/data/edhec-hedgefundindices.csv",
+        header=0,
+        index_col=0,
+        parse_dates=True,
+        na_values=-99.99,
+    )
+    hfi = hfi / 100
+    return hfi
