@@ -35,8 +35,6 @@ If a company's public filings show that R&D Expense grew by 5% this year, but Li
 
 Field Notes: Navigating the 10-K Maze
 
-If you are trying to find this data in the real world and coming up empty, it usually comes down to these factors:
-
 The "Boeing" Problem: Hardware vs. Software
 
 Looking for capitalized software at a manufacturing giant like Boeing is like looking for a needle in a haystack made of titanium.
@@ -45,56 +43,49 @@ Industry Type: Boeing is a heavy manufacturing company. Their R&D and PP&E are d
 
 Materiality: Because software isn't their core product, SEC rules don't force them to provide a dedicated roll-forward table for it.
 
-The Lesson: This specific R&D forensic tactic is designed for Pure-Play SaaS and Tech Companies (like Salesforce, Palantir, or Snowflake) where software is the only product.
-
 The "Hardware" Rule: Why Boeing Can't Capitalize Airplanes
 
-It is a logical assumption that Boeing could just capitalize the R&D of designing a new airplane to hide costs, just like a tech company does with code. However, US GAAP strictly forbids this.
+US GAAP strictly forbids capitalizing physical R&D.
 
 Physical R&D (ASC 730): Under US accounting rules, the research and development of physical products (airplanes, pharmaceuticals, hardware) must be expensed immediately as incurred. The accounting board considers physical R&D far too risky to ever count as a guaranteed asset until it is a finished good ready for sale.
 
-The Software Loophole (ASC 350-40): Software companies successfully lobbied the accounting boards years ago to create a special carve-out just for them. They argued their "product" is purely intellectual, allowing them to capitalize engineer salaries once "technological feasibility" is reached.
+The Software Loophole (ASC 350-40): Software companies successfully lobbied the accounting boards years ago to create a special carve-out, allowing them to capitalize engineer salaries once "technological feasibility" is reached.
 
-(Note: International companies using IFRS, like Airbus, actually CAN capitalize physical R&D, making comparing Boeing to Airbus incredibly complex!)
-
-The Agile Loophole
-
-When searching for capitalized software at modern tech companies, you might find surprisingly low numbers. This is often due to Agile Development. Because Agile teams code, test, and release in rapid 2-week sprints, companies argue that the window between "technological feasibility" and "deployment" is practically zero, allowing them to expense nearly everything.
-
-Case Study: The Salesforce "Ghost Hunt"
-
-If you parse a massive SaaS company's 10-K (like Salesforce) and completely fail to find the exact dollar amount of capitalized internal-use software, you have likely encountered the ultimate forensic outcome: Immateriality.
-
-Salesforce spends billions of dollars a year on R&D. Because they use rapid Agile development, the amount of software they are legally allowed to capitalize is so incredibly tiny compared to their massive total expenses that their auditors deem it "immaterial."
-
-When an accounting metric is immaterial, the SEC does not require the company to break it out in the text. They are legally allowed to just quietly dump it into the aggregated "Capital Expenditures" bucket. For an analyst, a "ghost hunt" is actually great news: it means the company's Earnings Quality is exceptionally high because they are expensing almost all of their engineering costs immediately.
-
-Decoding EDGAR: What are all these Exhibit Files?
-
-When you pull up a company on the SEC's EDGAR database, you will see a massive list of files. Most of them are noise, but here is what you need to know:
-
-10-K: The master document. This is the only one you need for the core financial statements and footnotes.
+Decoding EDGAR: Exhibit EX-32.1
 
 EX-32.1 (The "Go to Jail" Signature): After the Enron and WorldCom accounting fraud scandals, the US government passed the Sarbanes-Oxley Act (SOX). Section 906 requires the CEO and CFO to sign a sworn legal document stating the financials are not fraudulent. If they lie, EX-32.1 is what puts them in federal prison.
 
-CORRESP / UPLOAD (SEC Comment Letters): This is the holy grail for forensic analysts. These are records of the SEC actively auditing the company! If the SEC reads a 10-K and thinks the accounting is misleading, they send a letter demanding an explanation. Reading these lets you see exactly where the SEC's own forensic accountants suspect manipulation.
+The Manufacturer's Playbook: Inventory Costing & Labor
 
-The Manufacturer's Playbook: Inventory Costing
+When hardware companies cannot capitalize R&D, they manipulate earnings by using their physical inventory as a "parking lot" for expenses.
 
-If hardware companies like Boeing cannot capitalize their R&D, they manipulate earnings using their physical inventory instead. They use two primary levers:
+The Labor Hierarchy: Who Gets Capitalized?
 
-1. The Inflation Game (LIFO vs. FIFO)
+To understand how the "Factory Trick" works, you have to understand the three distinct ways accountants classify employee salaries.
 
-If the cost of raw materials (like aluminum or titanium) is rising, a manufacturer can choose how to recognize those costs when a plane is finally sold:
+1. Direct Labor (The Builders)
 
-LIFO (Last-In, First-Out): The company pretends the newest, most expensive metal was used for the plane sold today. This creates higher expenses, lowering their paper profit, and saving them massive amounts of money on their tax bill.
+Definition: Factory workers whose hands literally touch the product on the assembly line.
 
-FIFO (First-In, First-Out): The company pretends the oldest, cheapest metal was used. This lowers their expenses, artificially boosting their profit margins to impress Wall Street (but resulting in higher taxes).
+Accounting Rule: 100% of their salary is added to the value of the Inventory asset. This is an application of the Matching Principle: the labor cost is "stored" in the product and only hits the Income Statement when the product is actually sold.
 
-2. Overhead Absorption (The Factory Trick)
+Manipulation Risk: Low. Auditors can easily track timecards to specific production units.
 
-Building an airplane requires immense general overhead: factory electricity, security guards, and plant managers.
+2. Indirect Labor / Factory Overhead (The Support)
 
-The Rule: Accounting rules allow companies to take a portion of these general costs and "absorb" them into the value of the inventory.
+Definition: Plant managers, forklift drivers, janitors, and factory security. They are essential to the factory, but they don't build the specific units.
 
-The Manipulation: If a CFO needs to boost profits this quarter, they can aggressively claim that a larger percentage of the factory's electric bill or manager salaries was tied to "inventory production." This magically moves those expenses off the Income Statement and hides them on the Balance Sheet (as Inventory) until the planes are sold years later.
+Accounting Rule (Absorption): Their salaries are pooled and allocated to inventory using a predetermined rate:
+
+
+$$\text{Overhead Allocation Rate} = \frac{\text{Total Indirect Labor + Overhead}}{\text{Total Direct Labor Hours}}$$
+
+Manipulation Risk: High. By artificially increasing the "Total Indirect Labor" pool or changing the allocation denominator, a CFO can shift millions in salary expenses from the Income Statement into the Inventory asset.
+
+3. SG&A / Period Costs (The Executives)
+
+Definition: Corporate CEO, VP of Marketing, Legal, HR, IT.
+
+Accounting Rule: GAAP strictly forbids putting any of these salaries into inventory. They are "Period Costs," meaning they must be recorded as an immediate expense on the Income Statement (SG&A).
+
+Manipulation Risk: Low to Medium. Companies occasionally try to argue that a VP or IT worker is "strictly supporting manufacturing," but auditors are very aggressive about rejecting these claims because they violate the clear spirit of the Period Cost rule.
