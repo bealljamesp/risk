@@ -89,3 +89,5 @@ Definition: Corporate CEO, VP of Marketing, Legal, HR, IT.
 Accounting Rule: GAAP strictly forbids putting any of these salaries into inventory. They are "Period Costs," meaning they must be recorded as an immediate expense on the Income Statement (SG&A).
 
 Manipulation Risk: Low to Medium. Companies occasionally try to argue that a VP or IT worker is "strictly supporting manufacturing," but auditors are very aggressive about rejecting these claims because they violate the clear spirit of the Period Cost rule.
+
+_
