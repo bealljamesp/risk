@@ -90,4 +90,4 @@ Accounting Rule: GAAP strictly forbids putting any of these salaries into invent
 
 Manipulation Risk: Low to Medium. Companies occasionally try to argue that a VP or IT worker is "strictly supporting manufacturing," but auditors are very aggressive about rejecting these claims because they violate the clear spirit of the Period Cost rule.
 
-__
+___
